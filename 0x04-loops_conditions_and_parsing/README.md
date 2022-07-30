@@ -1,1 +1,3 @@
-# 0x04. Loops, conditions and parsing
+#System engineering dev-ops:
+#Shell scripting:
+#LOOPS CONDITIONS & PARSING.
