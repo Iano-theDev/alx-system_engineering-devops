@@ -3,7 +3,5 @@ This directory covers varios aspects of the web infrustructure and ways which th
 infrustructure can be implemented.
 
 # Tasks
-* 0. Simple web stack
-<iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVPd7Fhts=/?moveToViewport=-2236,-1404,4512,2406&embedId=480432941390" frameborder="0" scrolling="no" allowfullscreen></iframe>
+* <a href="https://drive.google.com/file/d/1QaU980FaLrCl5SksnrYXtIyo2o5K9ejj/view?usp=sharing">0-simple_web_stack</a>
 
-* 
