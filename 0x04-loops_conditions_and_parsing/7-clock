@@ -4,22 +4,12 @@
 # display minutes from 1 to 59
 
 HOUR=0
-MINUTE=1
-while [ $HOUR -le 12 ] ; do
-    case $HOUR in
-        0)
-            echo Hour: $HOUR
-            ;;
-    esac
+while [ $HOUR -lt 13 ] ; do
+    echo Hour: $HOUR
+    MINUTE=1
     while [ $MINUTE -lt 60 ] ; do
         echo $MINUTE
         ((MINUTE++)) || true
     done
-    case $HOUR in
-        1)
-            echo HOUR: $HOUR
-            ;;
-    esac 
-    echo $HOUR
     ((HOUR++)) || true
 done
