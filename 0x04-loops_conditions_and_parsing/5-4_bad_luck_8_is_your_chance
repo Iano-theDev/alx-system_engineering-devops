@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# prints bad luck in the 4th iteration 
+# prints good luck in the 8th iteration else prints best school
+
+COUNT=1
+while [ $COUNT -le 10 ] ; do
+    if [ $COUNT -eq 4 ] ; then
+        echo bad luck
+    elif [ $COUNT == 8 ] ; then
+        echo good luck
+    else
+        echo Best School
+    fi
+    ((COUNT++)) || true
+ done
