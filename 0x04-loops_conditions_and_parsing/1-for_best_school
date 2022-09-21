@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-COUNT=10
-for ((a=1; a <= COUNT ; a++)) ; do
-    echo Best School
+# displays Holberton School 10 times
+
+for _ in $(seq 1 10);
+do
+	echo "Best School"
 done
