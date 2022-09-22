@@ -1,0 +1,4 @@
+#!/usr/bin/env
+# list processes containing the word bash in them
+
+ps auxf | grep "bash"
