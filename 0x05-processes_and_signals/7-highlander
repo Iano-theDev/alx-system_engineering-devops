@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# displays string to infinity and beyond indefinitly
+# with a sleep 2 in between each iteration 
+# displays str I am invincible when recieving a SIGTERM signal
+
+
+trap "echo 'I am invinsible!!!'" SIGTERM 
+while true ; do
+    echo To infinity and beyond
+    sleep 2
+done
