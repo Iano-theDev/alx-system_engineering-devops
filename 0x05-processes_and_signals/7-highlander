@@ -4,7 +4,7 @@
 # displays str I am invincible when recieving a SIGTERM signal
 
 
-trap "echo 'I am invinsible!!!'" SIGTERM 
+trap "echo 'I am invincible!!!'" SIGTERM 
 while true ; do
     echo To infinity and beyond
     sleep 2
