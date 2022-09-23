@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# creates RSA key pair name: shcool, bytes: 4096 and a passphrase
+
+ssh-keygen -b 4096 -p betty
