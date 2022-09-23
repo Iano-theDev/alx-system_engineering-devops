@@ -1,6 +1,6 @@
 # install puppet-lint
 
-package { 'puppet-lint':
+package { 'Flask':
   ensure   => 'installed',
   provider => 'Flask',
 }
