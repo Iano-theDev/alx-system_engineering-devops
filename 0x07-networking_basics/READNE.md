@@ -43,3 +43,25 @@ is consumed.
 1. Physical layer
 (to be updated)
 
+### what's an IP address
+Every machine on the the Internet has a unique number assigned to it, called an IP address
+
+#### IPv4 and IPv6 Addresses
+An IP address always consists of 4 numbers separated by 
+periods, with the numbers having a possible range of 0 
+through 255.
+Out of these addresses there are 3 special ranged that are 
+reserved for special purposes.
+
+The first is the ```0.0.0.0``` address and refers to the default 
+network 
+```255.255.255.255``` address which is called the broadcast address.
+The third address, ```127.0.0.1```, is the loopback address, and refers to your machine. 
+
+##### IPv4 
+Internet Protocol Version 4
+This version uses 32-bit addresses
+
+##### IPv6 
+Internet Protocol Version 6
+This version uses 128-bit addresses
