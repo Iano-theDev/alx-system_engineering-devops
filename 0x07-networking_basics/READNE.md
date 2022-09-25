@@ -33,3 +33,13 @@ successively stripped from each layer's header or footer
 until reaching the topmost layer, where the last of the data 
 is consumed.
 
+### THE OSI MODEL LAYERS
+7. Application layer 
+6. Presentation layer
+5. Session layer
+4. Transport layer
+3. Network layer
+2. Data link layer
+1. Physical layer
+(to be updated)
+
