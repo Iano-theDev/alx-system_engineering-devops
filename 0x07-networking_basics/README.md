@@ -65,3 +65,6 @@ This version uses 32-bit addresses
 ##### IPv6 
 Internet Protocol Version 6
 This version uses 128-bit addresses
+
+
+Note that a specific IP + port = socket.
