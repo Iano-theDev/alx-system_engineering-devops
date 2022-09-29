@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# code to get Apache to run on the container .
+# Return a page containing Hello Holberton
+
+sudo service apache2 start
