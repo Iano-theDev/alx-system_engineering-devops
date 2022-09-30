@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-# code to get Apache to run on the container .
-# Return a page containing Hello Holberton
+# code to get Apache to run on the container Return a page containing Hello Holberton
 
-docker exec -ti fa477e06b726 /bin/bash
 sudo service apache2 start
-exit
