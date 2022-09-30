@@ -2,7 +2,5 @@
 # code to get Apache to run on the container .
 # Return a page containing Hello Holberton
 
-if [ sudo service apache2 start=true ] ; then
-	echo "Hello Holberton"
-fi
-
+sudo service apache2 start=true
+echo Hello Holberton
