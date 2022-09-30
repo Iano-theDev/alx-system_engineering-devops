@@ -2,7 +2,6 @@
 # code to get Apache to run on the container .
 # Return a page containing Hello Holberton
 
-sudo apt update
-apt-get install -y apache2
-apt-get install -y apache2-utils
+docker exec -ti fa477e06b726 /bin/bash
 sudo service apache2 start
+exit
