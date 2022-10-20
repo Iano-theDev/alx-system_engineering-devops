@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+# configure nginx to run on port 80
