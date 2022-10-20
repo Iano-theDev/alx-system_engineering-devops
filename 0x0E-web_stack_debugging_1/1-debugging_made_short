@@ -2,4 +2,4 @@
 # configure nginx to run on port 80
 sudo rm /etc/nginx/sites-enabled/default
 sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-sudo service nginx start
+sudo service nginx stop
