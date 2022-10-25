@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Confugures Nginx so that its HTTPs response contains a custom header(on web 01 & web-102)
+# Confugure Nginx so that its HTTPs response contains a custom header(on web 01 & web-102)
 sudo apt-get -y update
 sudo apt-get -y upgrade
 sudo apt-get -y install nginx
