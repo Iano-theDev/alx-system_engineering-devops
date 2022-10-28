@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-# Confugure Nginx so that its HTTPs response contains a custom header(on web 01 & web-102)
-sudo apt-get -y update
-sudo apt-get -y upgrade
+# Configure server with: Nginx, custom 404, custom 301 redirect to google
+# Add to HTTP header
+
+sudo apt-get update
 sudo apt-get -y install nginx
-sudo sed -i "11i\\\tadd_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
-echo "Hello world" | sudo tee /usr/share/nginx/html/index.html
 sudo service nginx start
+sudo sed -i "11i\\\tadd_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
+echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
+sudo service nginx restart
