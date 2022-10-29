@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# Configure HAProxy so that it sends traffic to web-01 & web-02.
-sudo apt-get -y update
-sudo apt-get -y install HAProxy
