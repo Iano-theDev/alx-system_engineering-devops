@@ -2,7 +2,7 @@
 # Installs and configures HAProxy on lb-01 server
 sudo apt-get -y update
 sudo apt-get -y upgrade
-sudo apt-get -y install haproxy=2.6\*
+sudo apt-get -y install haproxy
 sudo sed -i "s/ENABLED=0/ENABLED=1/" /etc/default/haproxy
 sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.orig
 cat <<EOT | sudo tee -a /etc/haproxy/haproxy.cfg
