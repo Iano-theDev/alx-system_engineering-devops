@@ -1,0 +1,3 @@
+# This is shell basics
+# Here is what the scripts in this directory are supposed to do
+* 0-current_working_directory - prints the absolute path name of the current working directory.
