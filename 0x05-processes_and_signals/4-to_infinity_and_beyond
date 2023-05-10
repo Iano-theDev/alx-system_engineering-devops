@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-# Prints the string to infiny and beyond indefinitly
-
-while true ; do 
-    echo To infinity and beyond
-    sleep 2
-done

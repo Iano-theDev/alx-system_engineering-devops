@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# Start Apache service & return page conatining Hello Holberton
-sudo service apache2 start

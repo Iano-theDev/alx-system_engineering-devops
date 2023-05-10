@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-# list the contents of the current directory 
-# only the part of the name after the dash is displayed
-
-for i in * ; do
-    echo "$i" | cut -d'-' -f2
-done
