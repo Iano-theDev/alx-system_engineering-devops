@@ -1,4 +1,4 @@
 #!/usr/bin/bash
-touch $1
+echo -e "#!/bin/bash" > $1
 chmod +x $1
 emacs $1
