@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -n ".*" | split -n r/1/2
+split -n r/1/2
