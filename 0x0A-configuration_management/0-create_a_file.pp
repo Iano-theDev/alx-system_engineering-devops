@@ -1,6 +1,6 @@
 # Puppet manifest to create a file with permissions
 
-file { '/tmp/school':
+file { 'school':
   path    => '/tmp/school',
   content => 'I love puppet',
   owner   => 'www-data',
