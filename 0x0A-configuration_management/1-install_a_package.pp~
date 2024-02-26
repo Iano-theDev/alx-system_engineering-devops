@@ -1,0 +1,11 @@
+# Script to install flask from pip3
+
+exec {'apt-update':
+  command => '/usr/bin/apt-get update'
+}
+
+package {'flask':
+  require   => Exec['apt-update'],
+  provider  => 'pip3',
+  ensure    => '2.1.0'
+}
