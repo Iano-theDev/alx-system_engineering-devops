@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Script to generate an RSA key
+
+ssh-keygen -p betty
