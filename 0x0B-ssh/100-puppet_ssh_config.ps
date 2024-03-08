@@ -1,6 +1,6 @@
-# configure ssh to prevent password authentication
+# puppet script to configure SSH client
 exec { 'echo':
-  path    => 'usr/bin:/bin',
+  path    => 'usr/bin:bin',
   command => 'echo "    IdentityFile ~/.ssh/school\n    PasswordAuthentication no" >> /etc/ssh/ssh_config',
   returns => [0,1],
 }
