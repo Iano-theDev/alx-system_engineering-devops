@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# pings the first arg 5 times max
+ping -c 5 $1
