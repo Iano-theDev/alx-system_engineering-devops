@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# lists all listenig tcp and udp prots with their pids and name 
 netstat -lp
