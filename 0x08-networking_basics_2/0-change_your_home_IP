@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # modifies hosts file to map localhost and facebook to new addresses
 cp /etc/hosts ~/hosts.new
-echo -e "localhost\t127.0.0.2\nfacebook.com\t8.8.8.8" >> ~/hosts.new
+sed -i "s/127.0.0.1.*$/127.0.0.2 localhost/" ~/hosts.new
+echo -e "8.8.8.8\tfacebook.com" >> ~/hosts.new
+cp /etc/hosts /etc/hosts.bak #back up of original
 cp -f ~/hosts.new /etc/hosts

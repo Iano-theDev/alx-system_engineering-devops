@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Restore back up from etc back up file
+cp /etc/hosts.bak /etc/hosts
