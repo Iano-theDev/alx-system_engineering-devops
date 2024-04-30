@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Displays all active IPv4 IPs
+ip -4 a | grep "inet" | cut -d " " -f 6 | cut -d "/" -f 1
