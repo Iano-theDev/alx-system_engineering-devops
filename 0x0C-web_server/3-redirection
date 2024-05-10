@@ -5,13 +5,16 @@ backup="${nginx_default}.baks"
 create_backup="cp $nginx_default $backup"
 restore_backup="cp $backup $nginx_default"
 
-redr='rewrite ^/redirect_me$ https://www.github.com permanent;'
+redr='rewrite ^/redirect_me$ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;'
 
 $restore_backup
 $create_backup
 
 #check if redirection rule already exists
-
+apt-get update -y
+apt-get upgrade -y
+apt install nginx -y
+service nginx start
 
 if ! grep -Fq "$redr" $nginx_default; then
     sed -i "0,/server_name/!b; /server_name/a\    $redr" $nginx_default
