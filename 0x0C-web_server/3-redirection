@@ -5,7 +5,7 @@ backup="${nginx_default}.baks"
 create_backup="cp $nginx_default $backup"
 restore_backup="cp $backup $nginx_default"
 
-redr='rewrite ^/redirect_me$ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;'
+redr='rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;'
 
 $restore_backup
 $create_backup
