@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # adds permanent redirection on a server via /redirect_me route
 nginx_default="/etc/nginx/sites-available/default"
-backup="${nginx_default}.baks"
+backup="${nginx_default}.bak"
 create_backup="cp $nginx_default $backup"
 restore_backup="cp $backup $nginx_default"
 
