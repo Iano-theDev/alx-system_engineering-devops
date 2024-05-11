@@ -7,11 +7,7 @@ restore_backup="cp $backup $nginx_default"
 
 redr='rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;'
 
-# check if backup exists before restoring it
-if [ -f $backup ]; then
-    $restore_backup
-    echo "Restoring backup!"
-fi
+$restore_backup
 $create_backup
 
 #check if redirection rule already exists
