@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+# adds permanent redirection on a server via /redirect_me route
+
+nginx_default="/etc/nginx/sites-available/default"
+backup="${nginx_default}.bak"
+create_backup="cp $nginx_default $backup"
+restore_backup="cp $backup $nginx_default"
+error_page="/var/www/html/custom_404.html"
+error_msg="Ceci n'est pas une page"
+err_directive="error_page 404 /custom_404.html;"
+cnf_err="${nginx_default}.err"
+create_err_file="cp $nginx_default $cnf_err"
+_error="\e[31m" #red
+_info="\e[36m" #cyan
+_success="\e[32m" #green
+_check="\e[33m" #light-yellow
+_reset="\e[0m" #reset
+
+# initial nginx set up
+apt-get update -y
+apt-get upgrade -y
+apt install nginx -y
+service nginx start
+
+# check if error page exists before creating one
+if [ ! -f $error_page ]; then
+    echo -e "$_info Creating custom 404 page! $_reset"
+    echo $error_msg >> $error_page
+else
+    echo -e "$_check Custom 404 page already exists! $_reset"
+fi
+
+# check if backup exists before restoring it
+if [ -f $backup ]; then
+    echo -e "$_info Restoring backup! $_reset"
+    $restore_backup
+else
+    echo -e "$_info No back up found, creating backup! $_reset"
+    $create_backup
+fi
+
+#check if custom 404  rule already exists
+if ! grep -Fq "$err_directive" $nginx_default; then
+    sed -i "0,/server_name/!b; /server_name/a\    $err_directive" $nginx_default
+    if nginx -t; then
+	service nginx reload
+    else
+	echo -e "$_info Creating error file! $_reset"
+	$create_err_file
+	echo -e "$_error Error in nginx configuration. Check error file $_reset"
+	$restore_backup
+    fi
+else
+    echo -e "$_check Custom 404 rule already exists. No changes were made. $_reset"
+fi
