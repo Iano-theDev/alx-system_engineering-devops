@@ -4,26 +4,26 @@ nginx_default="/etc/nginx/sites-available/default"
 backup="${nginx_default}.bak"
 create_backup="cp $nginx_default $backup"
 restore_backup="cp $backup $nginx_default"
-
 redr='rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;'
+
+#set up nginx initially
+apt-get update -y
+apt-get upgrade -y
+apt install nginx -y
+service nginx start
 
 # check if backup exists before restoring it
 if [ -f $backup ]; then
     echo "Restoring backup!"
-    $restore_backup
+    #$restore_backup
 else
     echo "No back up found, creating backup!"
     $create_backup
 fi
 
 #check if redirection rule already exists
-apt-get update -y
-apt-get upgrade -y
-apt install nginx -y
-service nginx start
-
 if ! grep -Fq "$redr" $nginx_default; then
-    sed -i "0,/server_name/!b; /server_name/a\    $redr" $nginx_default
+    sed -i "0,/server_name/!b; /server_name/a\\\n\t$redr\n" $nginx_default
     if nginx -t; then
 	service nginx reload
     else
